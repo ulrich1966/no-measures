@@ -1,0 +1,87 @@
+<!doctype html>
+<script type="text/javascript">
+	const img_objects = [ {
+		name : "img/gorilla.jpg",
+		alt : "bild 1",
+		lbl : "Gorilla",
+		txt : "Dieses ist ein Gorillabild",
+		link : {
+			href : "http://localhost/nocorona/web/dummy.html",
+			txt : "Zur Testseite"
+		}
+	}, {
+		name : "img/folie1.svg",
+		alt : "bild 2",
+		lbl : "Moin Bremen 1",
+		txt : "Dieses ist Moin Bremen 1",
+		link : {
+			href : "http://localhost/nocorona/web/dummy.html",
+			txt : "Zur Testseite"
+		}
+	}, {
+		name : "img/folie2.svg",
+		alt : "bild 3",
+		lbl : "Moin Bremen 2",
+		txt : "Dieses ist Moin Bremen 2",
+		link : {
+			href : "http://localhost/nocorona/web/dummy.html",
+			txt : "Zur Testseite"
+		}
+	}, {
+		name : "img/folie3.svg",
+		alt : "bild 4",
+		lbl : "Moin Bremen 3",
+		txt : "Dies ist Moin Bremen 3",
+		link : {
+			href : "http://localhost/nocorona/web/dummy.html",
+			txt : "Zur Testseite"
+		}
+	}, {
+		name : "img/folie4.svg",
+		alt : "bild 5",
+		lbl : "Moin Bremen 4",
+		txt : "Dies ist Moin Bremen 4",
+		link : {
+			href : "http://localhost/nocorona/web/dummy.html",
+			txt : "Zur Testseite"
+		}
+	} ];
+</script>
+
+<div id="img-crs" class="carousel slide" data-bs-ride="carousel">
+	<ul id="indicators" class="carousel-indicators"></ul>
+
+	<div id="img-content" class="carousel-inner slide" data-bs-ride="carousel"></div>
+
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span>
+	</button>
+
+</div>
+
+<div id="txt-content" class="img-txt"></div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var crsl = document.getElementById("img-crs");
+		appendImages(img_objects, "#img-content");
+		appendIndikators(img_objects, "#indicators");
+		setImgDescrition(img_objects, "#txt-content", 0);
+
+		$(".trigger").click(function() {
+			toggleFullScreen(crsl);
+		});
+
+		$("#img-crs").on('slide.bs.carousel', function() {
+			carousel_slide(img_objects, "#txt-content");
+		});
+
+		$("#img-crs").on('slid.bs.carousel', function() {
+			//configImg(crsl);
+		});
+
+	});
+</script>

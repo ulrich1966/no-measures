@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<div id="img-crsl" class="carousel slide" data-bs-ride="carousel">
+	<div id="img-indicators" class="carousel-indicators"></div>
+	<div id="img-list" class="carousel-inner"></div>
+	<button class="carousel-control-prev" type="button" data-bs-target="#img-crsl" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#img-crsl" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span>
+	</button>
+</div>
+<div id="txt-content" class="img-txt"></div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		var myCarousel = document.querySelector('#img-crsl')
+		var carousel = new bootstrap.Carousel(myCarousel, {
+			nextWhenVisible : true,
+			interval : 7000,
+			cycle : true
+		})
+		downSizeImages(8);
+		appendImages(img_objects, "#img-list" );
+		appendIndikators(img_objects, "#img-indicators", "#img-crsl" );
+		setImgDescrition(img_objects, "#txt-content", 0);
+		
+		$("#img-crsl").on('slide.bs.carousel', function() {
+			carousel_slide(img_objects, "#txt-content");
+		});
+
+		$("#img-crsl").on('slid.bs.carousel', function() {
+			//configImg(crsl);
+		});
+		$(".slide-img").click(function() {
+			toggleFullScreen(document.getElementById("img-crsl"));
+		});
+
+	});
+</script>
+
+<style>
+.d-block {
+	display: inline !important;
+}
+</style>

@@ -1,0 +1,155 @@
+/*
+Font: grau #4a4949
+Gruen: #2b9c38
+Blau: #233c7a
+Rot: #dc0c22
+Orange: #f29200
+Begeit Akzente
+	Tuerkis: #40b4a6
+	Abstuffungen (von Tuerkis zu Grau):
+		#8bcbbd
+		#c0e0d5
+		#d7ebe0
+		#929395
+		#bbbdbe
+		#e3e4e4
+*/
+
+
+@font-face {
+	font-family: 'myriad-pro';
+	src: url('../fonts/MyriadPro-Regular.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/MyriadPro-Regular.otf') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/MyriadPro-Regular.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/MyriadPro-Regular.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'myriad-pro-light';
+	src: url('../fonts/MyriadPro-Light.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/MyriadPro-Light.otf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/MyriadPro-Light.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/MyriadPro-Light.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'myriad-pro-semibold';
+	src: url('../fonts/MyriadPro-Semibold.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/MyriadPro-Semibold.otf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/MyriadPro-Semibold.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/MyriadPro-Semibold.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'myriad-pro-bold';
+	src: url('../fonts/MyriadPro-Bold.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/MyriadPro-Bold.otf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/MyriadPro-Bold.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/MyriadPro-Bold.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+	font-family: 'myriad-pro-lt';
+	src: url('../fonts/MyriadPro-lt.otf') format('woff'), /* Pretty Modern Browsers */
+         url('../fonts/MyriadPro-lt.otf') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/MyriadPro-lt.otf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/MyriadPro-lt.otf') format('svg'); /* Legacy iOS */
+}
+
+body {
+	font-family: myriad-pro, myriad-pro-light, myriad-pro-semibold, myriad-pro-bold, myriad-pro-lt!important;
+	color: #4a4949;
+}
+
+div {
+	border: none;
+}
+
+#img-carousel {
+	margin-bottom: 1rem;
+}
+
+#txt-content {
+	margin-top: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	color: #171717c9;
+	background-color: #40b4a6;
+	background-image: url("../img/lebllin-brt.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	text-align: center;
+}
+
+#header{
+	margin-bottom: 1rem;
+}
+#div-main {
+	/* border: 1px solid black; */
+}
+
+#footer {
+	background-color: #233c7a;
+	color: #ddd;
+	color: #ddd;
+	font-size: 0.8em;
+}
+
+#footer a{
+	color: #ddd;	
+}
+
+.logo{
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.arrow-box{
+	background: #ddd;
+	width: 50px;
+	height: 50px;
+}
+
+.slide-img{
+	height: 700px;	
+	border: 1px solid #000;
+ 	box-shadow: 5px -5px #6f6b6b3d;
+ 	box-shadow:  
+}
+
+.img-div{
+	
+}
+/*
+Gruen: #2b9c38
+Blau: #dc0c22
+Rot: #233c7a
+Orange: #f29200
+*/
+.green-bgc {
+	background-color: #2b9c38;
+}
+
+.blue-bgc {
+	background-color: #233c7a;
+}
+.red-bgc {
+	background-color: #dc0c22;
+}
+.orange-bgc {
+	background-color: #f29200;
+}
+.green {
+	color: #2b9c38;
+}
+
+.blue {
+	color: #233c7a;
+}
+.red {
+	color: #dc0c22;
+}
+.orange {
+	color: #f29200;
+}

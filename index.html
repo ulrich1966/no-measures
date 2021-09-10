@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="de">
+
+
+<head>
+<title>massnahmen-stop</title>
+<meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+<meta http-equiv="cache-control" content="no-cache">  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+<link rel="stylesheet" href="prop_css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bs_override.css" />
+<link rel="stylesheet" href="css/main.css" />
+<script src="prop_js/jquery.min.js"></script>
+<script src="prop_js/popper.min.js"></script>
+<script src="prop_js/bootstrap.min.js"></script>
+<script src="script/main.js"></script>
+<script src="script/objects.js"></script>
+</head>
+
+<body>
+	<div id="div-main" class="container">
+		<nav id="nav"></nav>
+		<header id="header"></header>
+		<main id="content"></main>
+		<footer id="footer"></footer>
+	</div>
+</body>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	loadHeader("public/_header.html");
+	loadNavBar("public/_nav-bar.html");
+	loadContent("public/_img-content.html");
+	loadFooter("public/_footer.html");
+});	
+</script>
+</html>
