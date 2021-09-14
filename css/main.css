@@ -14,8 +14,6 @@ Begeit Akzente
 		#bbbdbe
 		#e3e4e4
 */
-
-
 @font-face {
 	font-family: 'myriad-pro';
 	src: url('../fonts/MyriadPro-Regular.otf') format('woff'), /* Pretty Modern Browsers */
@@ -57,7 +55,7 @@ Begeit Akzente
 }
 
 body {
-	font-family: myriad-pro, myriad-pro-light, myriad-pro-semibold, myriad-pro-bold, myriad-pro-lt!important;
+	font-family: myriad-pro, myriad-pro-light, myriad-pro-semibold, myriad-pro-bold, myriad-pro-lt !important;
 	color: #4a4949;
 }
 
@@ -82,11 +80,13 @@ div {
 	text-align: center;
 }
 
-#header{
+#header {
 	margin-bottom: 1rem;
 }
+
 #div-main {
 	/* border: 1px solid black; */
+	
 }
 
 #footer {
@@ -96,30 +96,30 @@ div {
 	font-size: 0.8em;
 }
 
-#footer a{
-	color: #ddd;	
+#footer a {
+	color: #ddd;
 }
 
-.logo{
+.logo {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
 
-.arrow-box{
+.arrow-box {
 	background: #ddd;
 	width: 50px;
 	height: 50px;
 }
 
-.slide-img{
-	height: 700px;	
-	border: 1px solid #000;
- 	box-shadow: 5px -5px #6f6b6b3d;
- 	box-shadow:  
+.slide-img {
+	height: 700px;
+	-moz-box-shadow: 0 0 15px #bbbdbe;
+	-webkit-box-shadow: 0 0 15px #bbbdbe;
+	box-shadow: 0 0 15px #bbbdbe;
 }
 
-.img-div{
-	
+.img-div {
+	margin-bottom: 2rem;
 }
 /*
 Gruen: #2b9c38
@@ -134,12 +134,15 @@ Orange: #f29200
 .blue-bgc {
 	background-color: #233c7a;
 }
+
 .red-bgc {
 	background-color: #dc0c22;
 }
+
 .orange-bgc {
 	background-color: #f29200;
 }
+
 .green {
 	color: #2b9c38;
 }
@@ -147,9 +150,11 @@ Orange: #f29200
 .blue {
 	color: #233c7a;
 }
+
 .red {
 	color: #dc0c22;
 }
+
 .orange {
 	color: #f29200;
 }

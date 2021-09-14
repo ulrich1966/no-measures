@@ -11,6 +11,7 @@ var current_img_index = 0;
 var elem_height = 0;
 var leps = 0;
 var current_count = 0;
+var c = console;
 
 /**	
 	Nachdem die Webseite geladen ist, wird diese Methode aufgerufen
@@ -102,6 +103,10 @@ function setImgDescrition(img_objects, element_id, index) {
 	$(element_id).append(h5, p_txt, p_link);
 }
 
+/**
+	Merkt sich einen Wert fure die Hoehe einses Elements oder 
+	weist ihm die gemerkte Hoehe wieder zu.
+ */
 function manageSize(operation, element) {
 	if (operation == "write") {
 		$(element).height(elem_height);
@@ -161,12 +166,13 @@ function downSizeImages(value) {
 	entspraechend der Fenstergroesse bei 'Full Sreen'
  */
 function upSizeImages() {
-	var pedding = 50;
+	let pedding = 50;
+	let img_h = sizes.scrHeight - 2 * pedding;
 	$(".carousel-inner").css("height", sizes.scrHeight);
 	$(".carousel-inner").css("padding", pedding);
-	$(".slide-img").css("height", sizes.scrHeight - 2 * pedding);
+	$(".slide-img").css("height", img_h);
 }
-
+	
 /**	
 	- Iterriert ueber das uebergbene Objekt Array mit den Immage - Parametern
 	  Ezeigt ein neues IMG - Element, weist diesem die Attribute aus dem 
@@ -185,12 +191,12 @@ function appendImages(img_objects, parent_id) {
 		img_elm.setAttribute("src", io.name);
 		img_elm.setAttribute("alt", io.alt);
 		img_elm.setAttribute("class", "d-block slide-img");
-
+		
 		// Umschliessende DIV-Elemente bauen fue Style Manipulation  
 		let img_div = document.createElement("div");
 		img_div.setAttribute("class", "img-div");
 		img_div.append(img_elm);
-		
+			
 		// Umschliessende DIV-Elemente bauen 
 		let div_elm = document.createElement("div");
 		if (i == 0) {
@@ -211,7 +217,6 @@ function appendImages(img_objects, parent_id) {
 	- Hengt die Elemente in den per parent_id uebergebenen DOM-Baum.  
  */
 function appendIndikators(img_objects, parent_id, target) {
-	var size = img_objects.length;
 	for (let i in img_objects) {
 		// Buttons als Indikatoren bauen
 		button = document.createElement("button");
